@@ -1,27 +1,27 @@
-lw $t2 result 
+lw $t3 result 
 li $v0, 9
 li $a0, 4
 syscall
-move $t3, $v0
-sw $t2 $t3
-lw $t2 m 
-li $v0, 9
-li $a0, 4
-syscall
-move $t0, $v0
-sw $t2 $t0
-lw $t2 n 
+move $t4, $v0
+sw $t3 $t4
+lw $t3 m 
 li $v0, 9
 li $a0, 4
 syscall
 move $t1, $v0
-sw $t2 $t1
-lw $t2 p 
+sw $t3 $t1
+lw $t3 n 
 li $v0, 9
 li $a0, 4
 syscall
-move $t5, $v0
-sw $t2 $t5
-add $t2, $t1, $t5
-div $t4, $t0, $t2
-sw $t4, $t3
+move $t2, $v0
+sw $t3 $t2
+lw $t3 p 
+li $v0, 9
+li $a0, 4
+syscall
+move $t6, $v0
+sw $t3 $t6
+add $t3, $t2, $t6
+div $t5, $t1, $t3
+sw $t5, $t4

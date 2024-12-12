@@ -1,20 +1,20 @@
-lw $t1 x 
-li $v0, 9
-li $a0, 4
-syscall
-move $t2, $v0
-sw $t1 $t2
-lw $t1 y 
+lw $t2 x 
 li $v0, 9
 li $a0, 4
 syscall
 move $t3, $v0
-sw $t1 $t3
-lw $t1 z 
+sw $t2 $t3
+lw $t2 y 
 li $v0, 9
 li $a0, 4
 syscall
-move $t0, $v0
-sw $t1 $t0
-sub $t1, $t3, $t0
-sw $t1, $t2
+move $t4, $v0
+sw $t2 $t4
+lw $t2 z 
+li $v0, 9
+li $a0, 4
+syscall
+move $t1, $v0
+sw $t2 $t1
+sub $t2, $t4, $t1
+sw $t2, $t3

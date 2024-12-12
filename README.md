@@ -34,6 +34,11 @@ allocating heap memory whenever a variable or int is met.
     reverse order, so that popping and adding to them is extremely easy in python.
     Another list holds the registers that are in usage. This is so that we keep track of who is not available.
 
+Notes on the instructions:
+lw, is used for load word
+li, is used for the syscall 9: which is to allocate heap memory for MIPS
+
+
 2. node_class.py:
 Test cases.
 
@@ -41,8 +46,11 @@ Test cases.
 the shell script to be ran.
 Running instruction:
 first:
-    
-    
+
+    chmod +x create_assembly.sh 
+
+    ./create_assembly.sh
+
 
 
 Future Steps (Part 4):
