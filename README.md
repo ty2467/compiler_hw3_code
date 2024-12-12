@@ -1,3 +1,5 @@
+Name and Uni:
+Mike Yang, ty2467
 
 Background:
 1. Previous my team split up and, because of complications with the parser step, it is not convenient for me to use the 
@@ -13,7 +15,7 @@ is done instead is a library that translates a matrix addition into the loop bas
 Therefore it is suitable to support numeric operations.
 
 
-File Description 
+File Description
 1. real_assembly.py:
 The file that generates the assembly code. It uses post order traversal and maximal munch. 
 The operator led patterns are defined in a tile dictionary. Where, upon identifying an operator, a pattern of
@@ -33,7 +35,14 @@ allocating heap memory whenever a variable or int is met.
     Another list holds the registers that are in usage. This is so that we keep track of who is not available.
 
 2. node_class.py:
-Test cases. 
+Test cases.
+
+3. create_assembly.sh
+the shell script to be ran.
+Running instruction:
+first:
+    
+    
 
 
 Future Steps (Part 4):
@@ -44,5 +53,9 @@ requires
 2. Control Flow optimization
 
 3. Global Optimization
+
+4. Local Optimization
+
+etc.
 
 
