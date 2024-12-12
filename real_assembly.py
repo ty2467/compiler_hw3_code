@@ -18,9 +18,8 @@ tiles_hash = {
 
 # temp_count = 0
 instructions = []
-available_temporary_registers = ["$t9", "$t8", "$t7", "$t6", "$t5", "$t4", "$t3", "$t2", "$t1", "$t0"] #we have to work with real registers, not imaginary registers anymore.
+available_temporary_registers = ["$t9", "$t8", "$t7", "$t6", "$t5", "$t4", "$t3", "$t2", "$t1"] #we have to work with real registers, not imaginary registers anymore.
 busy_temporary_registers = []
-colored_map = {"example register: ", }
 
 
 def traverse(node):
@@ -78,10 +77,14 @@ def traverse(node):
         #without else statement, only one = assignment max is computed. multiline is not handled.
         #else
 
+
+
 def main():
     global instructions
     # global temp_count
+    j = 0
     for a in node_class.module_nodes:
+        j += 1
         # temp_count = 0
         instructions = []
         final_register = traverse(a)
@@ -90,6 +93,12 @@ def main():
         for i in range(num_registers):
             available_temporary_registers.append(busy_temporary_registers.pop())
         print(instructions)
+
+
+        with open(f"assembly_module_{j}.asm", "w") as file:
+            file.seek(0)
+            for instruction in instructions:
+                file.write(instruction + "\n")
 
 
 if __name__ == "__main__":
