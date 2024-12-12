@@ -17,7 +17,9 @@ File Description
 1. real_assembly.py:
 The file that generates the assembly code. It uses post order traversal and maximal munch. 
 The operator led patterns are defined in a tile dictionary. Where, upon identifying an operator, a pattern of
-instruction is identified. The leaf operands are identified via them being leafs. In turn, they are loaded
+instruction is located in the dictionary.
+
+The leaf operands are identified via them being leafs. In turn, they are loaded
 into memory.
 Right now, all variables are treated as heap variables. Hence you will see in line 40 is the MIPS code for 
 allocating heap memory.
